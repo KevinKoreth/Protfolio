@@ -54,13 +54,14 @@ function Contact() {
       <div className="items-container">
         <div className="contact_wrapper">
           <h1>Contact Me</h1>
-          <p>Got a project waiting to be realized? Let's collaborate and make it happen!</p>
+          <p>Looking for technical expertise to elevate your project? I'd love to discuss how we can achieve outstanding outcomes together.</p>
           <Box
             ref={form}
             component="form"
             noValidate
             autoComplete="off"
             className='contact-form'
+            onSubmit={sendEmail}
           >
             <div className='form-flex'>
               <TextField
@@ -74,6 +75,9 @@ function Contact() {
                 }}
                 error={nameError}
                 helperText={nameError ? "Please enter your name" : ""}
+                InputProps={{
+                  sx: { backgroundColor: 'white' }
+                }}
               />
               <TextField
                 required
@@ -86,6 +90,9 @@ function Contact() {
                 }}
                 error={emailError}
                 helperText={emailError ? "Please enter your email or phone number" : ""}
+                InputProps={{
+                  sx: { backgroundColor: 'white' }
+                }}
               />
             </div>
             <TextField
@@ -102,8 +109,11 @@ function Contact() {
               }}
               error={messageError}
               helperText={messageError ? "Please enter the message" : ""}
+              InputProps={{
+                sx: { backgroundColor: 'white' }
+              }}
             />
-            <Button variant="contained" endIcon={<SendIcon />} onClick={sendEmail}>
+            <Button variant="contained" endIcon={<SendIcon />} type="submit">
               Send
             </Button>
           </Box>

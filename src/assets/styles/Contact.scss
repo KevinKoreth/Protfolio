@@ -18,14 +18,14 @@
     color: white;
   }
 
-  fieldset {
-    background-color: white;
-  }
+  // fieldset {
+  //   background-color: white;
+  // }
 }
 
 label {
   font-size: 1.2rem;
-  font-family: 'DomaineDispNar-Medium', sans-serif;
+  font-family: '', sans-serif;
 }
 
 .form-flex {
@@ -35,7 +35,8 @@ label {
 }
 
 .form-flex .MuiFormControl-root {
-  width: 100%;
+  flex: 1;
+  width: 100;
 }
 
 form {
