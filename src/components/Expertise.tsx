@@ -3,7 +3,7 @@ import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinux, faDocker, faPython } from '@fortawesome/free-brands-svg-icons';
 import AIiconLight from "../assets/icons/artificial-intelligence.png";
-import AIiconDark from "../assets/icons/artificial-intelligence_dark.png";
+import AIiconDark from "../assets/icons/artificial-intelligence-dark.png";
 import { faComputer } from "@fortawesome/free-solid-svg-icons";
 import { faCloud, faUser, faLightbulb } from "@fortawesome/free-solid-svg-icons";
 import Chip from '@mui/material/Chip';
@@ -90,15 +90,8 @@ const innovationLabels = [
 ];
 
 
-function Expertise() {
-    const [isDarkMode, setIsDarkMode] = useState(false);
-    useEffect(() => {
-        const match = window.matchMedia("(prefers-color-scheme: dark)");
-        setIsDarkMode(match.matches);
-        const handler = (e: MediaQueryListEvent) => setIsDarkMode(e.matches);
-        match.addEventListener("change", handler);
-        return () => match.removeEventListener("change", handler);
-    }, []);
+function Expertise({mode}: { mode: string }) {
+    
     return (
         <div className="container" id="expertise">
             <div className="skills-container">
@@ -142,10 +135,11 @@ function Expertise() {
                     <div className="skill">
                         {/* <FontAwesomeIcon icon={faPython} size="3x" /> */}
                         <img
-                            src={isDarkMode ? AIiconLight : AIiconDark}
+                            src={mode == 'dark' ? AIiconLight : AIiconDark}
                             alt="Artificial Intelligence Icon"
                             style={{ width: "49px", height: "49px" }}
                         />
+                        
                         <h3>AI/ML Engineering & Security</h3>
                         <p>As an AI/ML Engineer, I have designed and implemented secure AI architectures, ensuring compliance with safety standards like HIPAA and GDPR. My expertise includes building AI solutions using Python, managing model risks, and integrating AI into applications.</p>
                         <div className="flex-chips">

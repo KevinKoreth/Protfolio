@@ -22,7 +22,7 @@ function Main() {
 
           <div className="mobile_social_icons">
             <a href="https://github.com/KevinKoreth" target="_blank" rel="noreferrer"><GitHubIcon/></a>
-            <a href="https://www.linkedin.com/in/yujisato/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+            <a href="https://www.linkedin.com/in/kevin-koreth/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
           </div>
         </div>
       </div>
