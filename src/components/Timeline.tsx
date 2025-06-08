@@ -20,7 +20,7 @@ function Timeline() {
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Deloitte Financial Advisory Services India Private Limited</h3>
+            <h3 className="vertical-timeline-element-title">Software Engineer<br/>Deloitte Financial Advisory Services India Private Limited</h3>
             <h4 className="vertical-timeline-element-subtitle">Mumbai, India</h4>
             <p>
               Full-stack Development, GenAI/LLM, Cloud, Project Management,
@@ -32,7 +32,7 @@ function Timeline() {
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Quess IT Staffing</h3>
+            <h3 className="vertical-timeline-element-title">Python Developer<br />Quess IT Staffing</h3>
             <h4 className="vertical-timeline-element-subtitle">Mumbai, India</h4>
             <p>
               Python Development, Data Engineering, Cloud Computing,
@@ -44,7 +44,7 @@ function Timeline() {
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Jio Haptik Tech Ltd.</h3>
+            <h3 className="vertical-timeline-element-title">Software Engineer<br />Jio Haptik Tech Ltd.</h3>
             <h4 className="vertical-timeline-element-subtitle">Mumbai, India</h4>
             <p>
               Software Engineer, Integrations, Micro Services, Django
@@ -56,10 +56,23 @@ function Timeline() {
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Analyst DevSecOps</h3>
+            <h3 className="vertical-timeline-element-title">Analyst DevSecOps<br />CyberTech Systems and Software Ltd</h3>
             <h4 className="vertical-timeline-element-subtitle">Mumbai, India</h4>
             <p>
               Capacity Planning, Resource Utilization, Automation
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="May 2018, - February 2019"
+            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
+            <h3 className="vertical-timeline-element-title">Senior Customer Service
+              Executive<br />Teleperformance Global Services Private Limited</h3>
+            <h4 className="vertical-timeline-element-subtitle">Mumbai, India</h4>
+            <p>
+              Customer Service, Client Management, Team Leadership
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>

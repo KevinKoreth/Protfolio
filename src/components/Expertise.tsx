@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinux, faDocker, faPython } from '@fortawesome/free-brands-svg-icons';
@@ -135,7 +134,7 @@ function Expertise({mode}: { mode: string }) {
                     <div className="skill">
                         {/* <FontAwesomeIcon icon={faPython} size="3x" /> */}
                         <img
-                            src={mode == 'dark' ? AIiconLight : AIiconDark}
+                            src={mode === 'dark' ? AIiconLight : AIiconDark}
                             alt="Artificial Intelligence Icon"
                             style={{ width: "49px", height: "49px" }}
                         />
