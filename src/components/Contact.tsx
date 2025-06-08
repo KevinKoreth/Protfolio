@@ -37,7 +37,7 @@ function Contact() {
 
       // console.log(templateParams);
       emailjs.init({
-        publicKey: '',
+        publicKey: 'ORgNgjhB6i92E0Lac',
         // Do not allow headless browsers
         blockHeadless: true,
         blockList: {
