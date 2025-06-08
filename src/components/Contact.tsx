@@ -28,7 +28,7 @@ function Contact() {
     /* Uncomment below if you want to enable the emailJS */
 
     if (name !== '' && email !== '' && message !== '') {
-      var templateParams = {
+      const templateParams = {
         title: "Enquiry from Portfolio",
         name: name,
         email: email,
@@ -53,7 +53,7 @@ function Contact() {
           throttle: 10000,
         },
       });
-      emailjs.send('service_cn36yvn', 'template_h5xpzrx', templateParams,).then(
+      emailjs.send('service_cn36yvn', 'template_h5xpzrx', templateParams).then(
         (response) => {
           console.log('SUCCESS!', response.status, response.text);
           alert('Message sent successfully!');
