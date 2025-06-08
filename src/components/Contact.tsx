@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import '../assets/styles/Contact.scss';
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
@@ -27,26 +27,45 @@ function Contact() {
 
     /* Uncomment below if you want to enable the emailJS */
 
-    // if (name !== '' && email !== '' && message !== '') {
-    //   var templateParams = {
-    //     name: name,
-    //     email: email,
-    //     message: message
-    //   };
+    if (name !== '' && email !== '' && message !== '') {
+      var templateParams = {
+        title: "Enquiry from Portfolio",
+        name: name,
+        email: email,
+        message: message
+      };
 
-    //   console.log(templateParams);
-    //   emailjs.send('service_id', 'template_id', templateParams, 'api_key').then(
-    //     (response) => {
-    //       console.log('SUCCESS!', response.status, response.text);
-    //     },
-    //     (error) => {
-    //       console.log('FAILED...', error);
-    //     },
-    //   );
-    //   setName('');
-    //   setEmail('');
-    //   setMessage('');
-    // }
+      // console.log(templateParams);
+      emailjs.init({
+        publicKey: 'ORgNgjhB6i92E0Lac',
+        // Do not allow headless browsers
+        blockHeadless: true,
+        blockList: {
+          // Block the suspended emails
+          // list: ['foo@emailjs.com', 'bar@emailjs.com'],
+          // The variable contains the email address
+          watchVariable: 'userEmail',
+        },
+        limitRate: {
+          // Set the limit rate for the application
+          id: 'app',
+          // Allow 1 request per 10s
+          throttle: 10000,
+        },
+      });
+      emailjs.send('service_cn36yvn', 'template_h5xpzrx', templateParams,).then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Message sent successfully!');
+        },
+        (error) => {
+          console.log('FAILED...', error);
+        },
+      );
+      setName('');
+      setEmail('');
+      setMessage('');
+    }
   };
 
   return (
