@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import TextField from '@mui/material/TextField';
+import EmailIcon from '@mui/icons-material/Email';
 
 function Contact() {
 
@@ -135,6 +136,10 @@ function Contact() {
             <Button variant="contained" endIcon={<SendIcon />} type="submit">
               Send
             </Button>
+            <a href="mailto:kevin.koreth@gmail.com" style={{ color: '#5000ca', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '4px' ,paddingTop: '5px'}}>
+            <EmailIcon style={{ fontSize: 40 }} />
+            <span><h4>Write to me</h4></span>
+          </a>
           </Box>
         </div>
       </div>
