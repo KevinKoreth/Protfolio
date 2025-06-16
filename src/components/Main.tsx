@@ -2,11 +2,12 @@ import React from "react";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ProfileImageBW from '../assets/images/profile_image_bw.jpg';
 import ProfileImageColor from '../assets/images/profile_image.jpg';
 import '../assets/styles/Main.scss';
 
-function Main({mode}: { mode: string }) {
+function Main({ mode }: { mode: string }) {
 
   return (
     <div className="container">
@@ -16,17 +17,21 @@ function Main({mode}: { mode: string }) {
         </div>
         <div className="content">
           <div className="social_icons">
-            <a href="https://github.com/KevinKoreth" target="_blank" rel="noreferrer"><GitHubIcon/></a>
-            <a href="https://www.linkedin.com/in/kevin-koreth/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
-            <a href="mailto:kevin.koreth@gmail.com" target="_blank" rel="noreferrer"><EmailIcon/></a>
+            <a href="https://github.com/KevinKoreth" target="_blank" rel="noreferrer"><GitHubIcon /></a>
+            <a href="https://www.linkedin.com/in/kevin-koreth/" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
+            <a href="mailto:kevin.koreth@gmail.com" target="_blank" rel="noreferrer"><EmailIcon /></a>
           </div>
           <h1>Kevin Koreth</h1>
           <p>Software Engineer</p>
+          <div className="location" style={{ color: mode === 'dark' ? '#fff' : '#000' }}>
+            <LocationOnIcon/>
+            <span>MUMBAI, INDIA</span>
+          </div>
 
           <div className="mobile_social_icons">
-            <a href="https://github.com/KevinKoreth" target="_blank" rel="noreferrer"><GitHubIcon/></a>
-            <a href="https://www.linkedin.com/in/kevin-koreth/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
-            <a href="mailto:kevin.koreth@gmail.com" target="_blank" rel="noreferrer"><EmailIcon/></a>
+            <a href="https://github.com/KevinKoreth" target="_blank" rel="noreferrer"><GitHubIcon /></a>
+            <a href="https://www.linkedin.com/in/kevin-koreth/" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
+            <a href="mailto:kevin.koreth@gmail.com" target="_blank" rel="noreferrer"><EmailIcon /></a>
           </div>
         </div>
       </div>

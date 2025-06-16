@@ -21,6 +21,18 @@
     text-align: left;
     z-index: 2;
 
+    .location {
+        display: flex;
+        size: 10px;
+        margin: 0px;
+        flex-direction: row;
+        align-items: center;
+        gap: 2px;
+
+        svg {
+            font-size: 1.0em;
+        }
+    }
     .social_icons {
         display: flex;
         flex-direction: row;
